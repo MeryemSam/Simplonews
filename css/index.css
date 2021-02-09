@@ -1,1 +1,99 @@
+@font-face{
+   font-family: 'Mulish', sans-serif;
+  src: url("../assets/fonts/Mulish-Italic-VariableFont_wght.ttf") format("ttf");
+}
 
+*{
+    font-family: 'Mulish', sans-serif;
+}
+body{
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --red:#CE0033;
+    --black:black;
+    --white:white;
+}
+
+
+header{
+    height:25vh;
+    width: 100%;
+    background: linear-gradient(rgba(255, 255, 255, 0) , rgb(255, 255, 255)),
+    url("https://images.unsplash.com/photo-1514388614019-c755c395185c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80") bottom center no-repeat;
+    background-size: 100%;
+}
+
+.loginsection{
+    width: 90%;
+    margin: 1px auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.loginsection img{
+    width: 30%;
+    margin: 8% auto;
+}
+
+.loginsection form{
+    width: 80%;
+    margin: 0% auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginsection form div{
+    margin: 4% 0%;
+    padding: 1%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.loginsection form div .input{
+    border-radius: 5px;
+    height: 30px;
+    padding: 1%;
+    margin-top: 3% ;
+    border: 1px solid var(--red);
+}
+
+
+.loginsection form div:nth-child(3){
+    display: flex;
+    flex-direction: row;
+}
+
+.buttons{
+    height: 30px;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    width: 49%;
+    margin: 0% 1%;
+}
+
+.black{
+    background-color: var(--black);
+    border: none;
+}
+
+.loginsection a{
+    text-decoration: none;
+    color: cornflowerblue;
+    text-align: center;
+    margin: 3% 0%;
+}
+
+.loginsection p{
+    color: var(--black);
+    text-align: center;
+    margin: 3% 0%;
+    opacity: 0.5;
+}
