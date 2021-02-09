@@ -15,5 +15,5 @@ function updateContent(target, newContent, contentType = "text") {
 }
 
 
-updateContent(articleAuthorName, "lol", 'text')
-updateContent(articleImage, "assets/images/white-image.png", 'img')
+// updateContent(articleAuthorName, "lol", 'text')
+// updateContent(articleImage, "assets/images/white-image.png", 'img')
