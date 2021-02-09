@@ -1,30 +1,11 @@
-@font-face {
-    font-family: 'Mulish', sans-serif;
-    src: url("../assets/fonts/Mulish-Italic-VariableFont_wght.ttf") format("ttf");
-}
 
-* {
-    font-family: 'Mulish', sans-serif;
-}
-
-body {
-    margin: 0;
-    height: 100%;
-    width: 100%;
-}
-
-:root {
-    --red: #CE0033;
-    --black: black;
-    --white: white;
-}
 
 
 header {
     height: 25vh;
     width: 100%;
     background: linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255)),
-        url(../assets/images/foot\ red.jpg) bottom center no-repeat;
+    url(../assets/images/foot\ red.jpg) bottom center no-repeat;
     background-size: 100%;
 }
 
@@ -80,10 +61,19 @@ header {
     margin: 0% 1%;
 }
 
+
+.buttons:hover{
+   opacity: 0.8;
+   cursor:pointer;
+}
+
 .black {
     background-color: var(--black);
     border: none;
 }
+
+
+
 
 .loginsection a {
     text-decoration: none;
@@ -102,7 +92,7 @@ header {
 @media screen and (min-width: 1200px) {
 
     main {
-        width: 50%;
+        width: 80%;
         margin: 0 auto;
     }
 
@@ -111,7 +101,7 @@ header {
     }
 
     .loginsection {
-        width: 100%;
+        width: 60%;
         font-size: 1.1vw;
     }
 

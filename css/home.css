@@ -1,3 +1,70 @@
-body{
-    margin: 0;
+main{
+   width:90%;
+   margin: 0 auto;
+}
+.homesection{
+    width: 100%;
+    padding: 10% 0;
+}
+
+.homesection img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.homesection h2 {
+    width: 100%;
+}
+
+
+
+.homesection .post {
+    background-color: rgba(189, 189, 189, 0.05);
+    display: flex;
+    justify-content: space-between;
+    padding: 5%;
+    margin: 5% 0%;
+    flex-direction: column;
+
+}
+
+.homesection .post h4{
+    text-align: right;
+    color: var(--red);
+}
+
+.homesection p {
+    display: none;
+}
+
+
+
+@media screen and (min-width: 1200px) {
+
+    main{
+        width:80%;
+        margin: 0 auto;
+     }
+     .homesection{
+        padding: 3% 0;
+     }
+
+    .homesection .post {
+        flex-direction: row;
+        padding: 1%;
+        border-radius: 10px;
+    }
+
+    .homesection img {
+        width: 50%;
+        margin: 0% 2%;
+    }
+
+    .homesection p {
+        display: block;
+    }
+
+
+
 }
