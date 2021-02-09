@@ -1,1 +1,141 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    /* justify-content: centers; */
+    /* width: 100vw; */
+    flex-direction: column;
+    background-color: white;
+}
 
+
+/* @font-face {
+    src: url(fonts/Roboto.woff2) format('woff2'), url() format('woff'), url() format('truetype');
+    font-family: 'Be Vietnam', sans-serif;
+} */
+
+@font-face {
+    font-family: 'Mulish', sans-serif;
+    src: url("../assets/fonts/Mulish-Italic-VariableFont_wght.ttf") format("ttf");
+}
+
+* {
+    font-family: 'Mulish', sans-serif;
+}
+
+nav {
+    order: 1;
+}
+
+.authorName {
+    /* justify-self: right; */
+    margin: 0% 0% 2.5% 65%;
+    color: #CE0033;
+    /* font-weight: bold; */
+}
+
+.articleTitle {
+    margin: 1% 5% 0;
+    /* background-color: azure; */
+}
+
+main {
+    order: 2;
+    display: flex;
+    width: 95vw;
+    /* padding: 5% 25% 5% 25%; */
+    /* background-color: rgba(0, 255, 255, 0.426); */
+    justify-content: center;
+    height: auto;
+    margin-left: 2.5%;
+}
+
+footer {
+    order: 3;
+}
+
+figure {
+    /* background-color: brown; */
+    /* width: 80vw; */
+    padding: 0%;
+    margin: 0;
+    /* width: 90VW; */
+}
+
+img {
+    height: 25vh;
+    /* width: 60vw; */
+    width: auto;
+    background-color: blueviolet;
+    /* justify-self: center; */
+}
+
+header p {
+    align-self: flex-end;
+}
+
+section {
+    margin: .5% 8%;
+}
+
+.articleText {
+    text-align: left;
+}
+
+
+/* DESKTOP VERSION*/
+
+@media only screen and (min-width: 768px) {
+    body {
+        /* background-color: burlywood; */
+    }
+    section {}
+    body {}
+    .authorName {
+        margin: 1% 0% 1% 70%;
+        color: #CE0033;
+        padding: 0;
+        /* margin: 0; */
+        /* width: 10vw; */
+        /* width: 10%; */
+    }
+    .articleTitle {
+        margin: 5% 8% 0;
+        text-align: left;
+        /* width: 10vw; */
+        /* background-color: azure; */
+    }
+    main {
+        order: 2;
+        display: flex;
+        width: 100vw;
+        justify-content: center;
+        height: auto;
+        margin: 0;
+        padding: 0%;
+        /* width: 90%; */
+    }
+    footer {
+        order: 3;
+    }
+    figure {
+        padding: 0%;
+        margin: 0;
+        background-color: rgb(29, 29, 29);
+    }
+    img {
+        height: 30vh;
+        width: auto;
+    }
+    header h1 {
+        /* background-color: royalblue; */
+    }
+    section {}
+    p {
+        /* background-color: royalblue; */
+    }
+}
+
+
+/* DESKTOP VERSION END*/
