@@ -8,8 +8,8 @@ nav.innerHTML=
     <i class="barbuton fas fa-bars"></i>
 </div>
 
-<div class="navigation">
-    <a href="">Home</a>
+<div class="navigationhidden">
+    <a href="home.html">Home</a>
     <a href="">Log out</a>
 </div>
 
@@ -20,7 +20,7 @@ nav.innerHTML=
 
 
 let barbuton = document.querySelector(".barbuton");
-let navigation = document.querySelector(".navigation");
+let navigation = document.querySelector(".navigationhidden");
 barbuton.addEventListener("click" , () =>{
 
     if (navigation.className === "navigationhidden") {
@@ -33,4 +33,4 @@ barbuton.addEventListener("click" , () =>{
       }
       
 })
-//fin de histoire du la nav
+//fin de histoire du la nav-vishnu 
