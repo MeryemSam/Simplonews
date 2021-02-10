@@ -1,4 +1,4 @@
-
+// import * as script from 'js/script.js';
 
 let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjoib3dvVXNlckB0ZXN0LmZyIiwicGFzc3dvcmQiOiIkMmIkMTAkak45SkhRbmhkUVZ1ekszZndwRGJRZWxMUjg3OU9zeHFSdkR1TXVULlZwdGdHNlZTOTkxWnUiLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJpYXQiOjE2MTI5NjM5ODB9.JYF5P8FTHl3UHszkjC613vztA9bCFqKglo6p3P_bW0o";
 let fetch_config = {
@@ -31,10 +31,10 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                     for (let i = 0; i < arr.length; i++) {
 
                     str +=
-                            `
+                    `
                     <div class="post" id="${data["articles"][i]["id"]}">
                     <img src="${data["articles"][i]["img"]}">
-                    <div>
+                    <div class="titreandresum">
                     <h2>${data["articles"][i]["title"]}</h2>
                     <h4>${data["articles"][i]["author"]}</h4>
                     <p>${data["articles"][i]["resume"]}</p>
@@ -46,7 +46,19 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
 
                     homesection.innerHTML = str;
 
+                    let post = document.querySelectorAll(".post");
+                    console.log(post);
 
+                    post.forEach(element => {
+                        element.addEventListener("click" , () => {
+                            document.location.href="./article.html"; 
+                            function affiche() {
+                                console.log(element.id);
+                            }
+                           
+
+                        })
+                    });
 
                 }
             })

@@ -11,6 +11,7 @@ body {
     margin: 0;
     height: 100%;
     width: 100%;
+    padding: 0;
 }
 
 :root {
@@ -101,19 +102,18 @@ footer {
   }
 
    footer  .footer-right{
-    margin: 1% auto;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
   }
   
   footer .footer-right a {
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border-radius: 2px;
-    font-size: 30px;
+    font-size: 26px;
     color: var(--red);
-    text-align: center;
-    line-height: 35px;
     transition:all .25s;
+    margin: 0 5%;
   }
 
   /*  Footer links */ 
@@ -125,18 +125,16 @@ footer {
     font-size: 18px;
     font-weight: bold;
     margin: 0 auto;
-    word-spacing: 5em;
-
-
-
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
   }
 
   footer div.footer-links a {
-    display: inline-block;
-    line-height: 1.8;
     text-decoration: none;
     transition: ease .25s;
     color: #005bd3;
+    margin: 0 5%;
   }
 
  
@@ -197,6 +195,12 @@ footer {
         margin: 0 10%;
   
     }
+
+    
+   footer  .footer-right{
+
+    width: 20%;
+  }
 
 
 }

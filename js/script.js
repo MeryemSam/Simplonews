@@ -56,7 +56,6 @@ footer.innerHTML = `
     <a href="#">Contact</a>
     <a href="#">About</a>
     <a href="#">Help</a>
-    <a href="#">Contribute</a>
 </div>
 </div>`
 

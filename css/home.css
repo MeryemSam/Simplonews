@@ -22,7 +22,7 @@ main{
 .homesection .post {
     background-color: rgba(189, 189, 189, 0.05);
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     padding: 5%;
     margin: 5% 0%;
     flex-direction: column;
@@ -30,10 +30,14 @@ main{
 }
 
 .homesection .post h4{
+    width: 100%;
     text-align: right;
     color: var(--red);
 }
 
+.homesection .post .titreandresum{
+    width: 100%;
+}
 .homesection p {
     display: none;
 }
@@ -57,7 +61,8 @@ main{
     }
 
     .homesection img {
-        width: 50%;
+        width: 400px;
+        height: auto;
         margin: 0% 2%;
     }
 
