@@ -90,6 +90,58 @@ nav div .barbuton {
 }
 
 
+footer {
+    background-color: whitesmoke;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 5% 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   footer  .footer-right{
+    margin: 1% auto;
+  }
+  
+  footer .footer-right a {
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border-radius: 2px;
+    font-size: 30px;
+    color: var(--red);
+    text-align: center;
+    line-height: 35px;
+    transition:all .25s;
+  }
+
+  /*  Footer links */ 
+  footer p{
+      text-align: center;
+      color: var(--red);
+  }
+  footer div.footer-links {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 auto;
+    word-spacing: 5em;
+
+
+
+  }
+
+  footer div.footer-links a {
+    display: inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    transition: ease .25s;
+    color: #005bd3;
+  }
+
+ 
+
+
 @media screen and (min-width: 1200px) {
 
     nav {
@@ -135,7 +187,16 @@ nav div .barbuton {
         display: flex;
     }
 
+    footer {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+      }
 
+   footer p{
+        margin: 0 10%;
+  
+    }
 
 
 }

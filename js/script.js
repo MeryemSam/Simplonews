@@ -14,7 +14,7 @@ nav.innerHTML=
 </div>
 
 <div class="navigationphone">
-    <a href="">Home</a>
+    <a href="home.html">Home</a>
     <a href="">Log out</a>
 </div>`;
 
@@ -33,4 +33,31 @@ barbuton.addEventListener("click" , () =>{
       }
       
 })
-//fin de histoire du la nav-vishnu 
+//fin du la nav
+
+
+//histoire du la footer
+let footer = document.querySelector("footer");
+footer.innerHTML = `
+<div class="footer-right">
+
+<a href="#"><i class="fab fa-facebook-f"></i></a>
+<a href="#"><i class="fab fa-twitter"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="#"><i class="fab fa-pinterest"></i></a>
+
+</div>
+<p>Copyrights reserved by Vincent and the theam &copy; 2021</p>
+<div class="footer-left">
+
+
+<div class="footer-links">
+    <a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Help</a>
+    <a href="#">Contribute</a>
+</div>
+</div>`
+
+//fin du la footer
