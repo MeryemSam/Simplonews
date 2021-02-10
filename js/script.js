@@ -1,8 +1,7 @@
-
 //histoire du la nav
 let nav = document.querySelector("nav");
-nav.innerHTML= 
-`<a href="home.html"><img src="./assets/images/SIMPLONNEWS.png" alt="logo" ></a>
+nav.innerHTML =
+    `<a href="home.html"><img src="./assets/images/SIMPLONNEWS.png" alt="logo" ></a>
 
 <div>
     <i class="barbuton fas fa-bars"></i>
@@ -21,19 +20,19 @@ nav.innerHTML=
 
 let barbuton = document.querySelector(".barbuton");
 let navigation = document.querySelector(".navigationhidden");
-barbuton.addEventListener("click" , () =>{
+barbuton.addEventListener("click", () => {
 
-    if (navigation.className === "navigationhidden") {
-        navigation.classList.add("navigation");
-        navigation.classList.remove("navigationhidden");
-      } else {
-        navigation.classList.add("navigationhidden");
-        navigation.classList.remove("navigation");
+        if (navigation.className === "navigationhidden") {
+            navigation.classList.add("navigation");
+            navigation.classList.remove("navigationhidden");
+        } else {
+            navigation.classList.add("navigationhidden");
+            navigation.classList.remove("navigation");
 
-      }
-      
-})
-//fin du la nav
+        }
+
+    })
+    //fin du la nav
 
 
 //histoire du la footer
