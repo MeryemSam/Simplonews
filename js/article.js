@@ -1,4 +1,6 @@
-import { affiche } from './home';
+var passid = sessionStorage.getItem("passid");
+console.log(passid);
+console.log(passid);
+console.log(passid);
+console.log(passid);
 
-
-affiche();
