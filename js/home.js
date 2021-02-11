@@ -52,10 +52,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                     post.forEach(element => {
                         element.addEventListener("click" , () => {
                             var mainid = element.id;
-                            console.log(mainid);
-
-                            document.location.href="./article.html"; 
+                            //demain
                             sessionStorage.setItem("passid", mainid);
+                            document.location.href="./article.html"; 
                         })
     
                     });

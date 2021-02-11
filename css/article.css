@@ -26,7 +26,11 @@
     border: 1px solid black;
 }
 
-
+.reume{
+    font-style: italic;
+    padding: 3% 0;
+    border-bottom: 1px solid #ce003428;
+}
 
 .articlesection section {
     padding: 1%;
