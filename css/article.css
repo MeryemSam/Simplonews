@@ -2,6 +2,7 @@
 .articlesection{
     padding: 20% 8%;
     margin: 0 auto;
+    display: flex;
 }
 .authorName {
     text-align: right;
@@ -42,13 +43,25 @@
     text-align: left;
 }
 
+.longbutton{
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    padding: 2%;
+}
+
 
 /* DESKTOP VERSION*/
 @media only screen and (min-width: 768px) {
 
     .articlesection{
         padding-top: 6%;
-        width: 80%;
+        width: 60%;
         margin: 0 auto;
     }
   
@@ -67,6 +80,8 @@
         width: 60%;
         margin: 0% auto;
     }
+
+    
 }
 
 

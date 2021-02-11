@@ -1,6 +1,5 @@
 // import * as script from 'js/script.js';
-
-let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjoib3dvVXNlckB0ZXN0LmZyIiwicGFzc3dvcmQiOiIkMmIkMTAkak45SkhRbmhkUVZ1ekszZndwRGJRZWxMUjg3OU9zeHFSdkR1TXVULlZwdGdHNlZTOTkxWnUiLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJpYXQiOjE2MTI5NjM5ODB9.JYF5P8FTHl3UHszkjC613vztA9bCFqKglo6p3P_bW0o";
+var token = sessionStorage.getItem("token");
 let fetch_config = {
     method: "GET",
     headers: {
@@ -29,10 +28,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
             let arr = data["articles"];
             let str = "";
                     for (let i = 0; i < arr.length; i++) {
-                        
                         str +=
                         `
-                        <div class="post" id="${data["articles"][i]["id"]}">
+                        <div class="post" id="${data["articles"].indexOf(arr[i])}">
                         <img src="${data["articles"][i]["img"]}">
                         <div class="titreandresum">
                         <h2>${data["articles"][i]["title"]}</h2>
@@ -44,7 +42,7 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                     }
 
 
-                    
+ 
                     homesection.innerHTML = str;
                     
                     let post = document.querySelectorAll(".post");

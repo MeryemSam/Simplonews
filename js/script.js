@@ -2,20 +2,20 @@
 //histoire du la nav
 let nav = document.querySelector("nav");
 nav.innerHTML= 
-`<img src="./assets/images/SIMPLONNEWS.svg" alt="logo" srcset="">
+`<a href="home.html"><img src="./assets/images/SIMPLONNEWS.svg" alt="logo" ></a>
 
 <div>
     <i class="barbuton fas fa-bars"></i>
 </div>
 
 <div class="navigationhidden">
-    <a href="home.html">Home</a>
-    <a href="">Log out</a>
+    <a href="home.html">Accueil</a>
+    <a href="">Se déconnecter</a>
 </div>
 
 <div class="navigationphone">
-    <a href="home.html">Home</a>
-    <a href="">Log out</a>
+    <a href="home.html">Accueil</a>
+    <a href="">Se déconnecter</a>
 </div>`;
 
 
@@ -48,14 +48,14 @@ footer.innerHTML = `
 <a href="#"><i class="fab fa-pinterest"></i></a>
 
 </div>
-<p>Copyrights reserved by Vincent and the theam &copy; 2021</p>
+<p>Tous les droits réservés par Team Simplon News &copy; 2021</p>
 <div class="footer-left">
 
 
 <div class="footer-links">
     <a href="#">Contact</a>
-    <a href="#">About</a>
-    <a href="#">Help</a>
+    <a href="#">À propos</a>
+    <a href="#">Aide</a>
 </div>
 </div>`
 

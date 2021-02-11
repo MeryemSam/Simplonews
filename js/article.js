@@ -1,9 +1,8 @@
-var mainid = sessionStorage.getItem("passid");
-var passid = mainid-1;
+var passid = sessionStorage.getItem("passid");
+// var passid = mainid-1;
 console.log(passid);
 
-
-
+       
 
 let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjoib3dvVXNlckB0ZXN0LmZyIiwicGFzc3dvcmQiOiIkMmIkMTAkak45SkhRbmhkUVZ1ekszZndwRGJRZWxMUjg3OU9zeHFSdkR1TXVULlZwdGdHNlZTOTkxWnUiLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJpYXQiOjE2MTI5NjM5ODB9.JYF5P8FTHl3UHszkjC613vztA9bCFqKglo6p3P_bW0o";
 let fetch_config = {
@@ -35,7 +34,7 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                         `
                         <article>
                         <div>
-                            <h1 class="articleTitle">${data["articles"][passid]["title"]}</h1>
+                            <h2 class="articleTitle">${data["articles"][passid]["title"]}</h2>
                             <p class="authorName">${data["articles"][passid]["author"]}</p>
                             </div>
                         <section>
@@ -45,12 +44,11 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                             </p>
         
                         </section>
-                    </article>
+                        <a href="home.html" class="longbutton">Accueil</a>
+                        </article>
+
+                   
                         `
-
-
-                
-
                 }
             })
             .catch(function (data_parsing_error) {
@@ -61,6 +59,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
             // Cas erreur server (API)
             console.log(server_errors);
         })
-        
+
+
+
+ 
         
 

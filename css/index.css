@@ -1,6 +1,4 @@
 
-
-
 header {
     height: 25vh;
     width: 100%;
@@ -11,7 +9,7 @@ header {
 
 .loginsection {
     width: 90%;
-    margin: 1px auto;
+    margin: 0 auto;
     padding: 1%;
     display: flex;
     flex-direction: column;
@@ -25,7 +23,7 @@ header {
 
 .loginsection form {
     width: 80%;
-    margin: 0% auto;
+    margin: 0 auto;
     padding: 1%;
     display: flex;
     flex-direction: column;
@@ -93,12 +91,13 @@ header {
     }
 
     header{
-        height: 40vh;
+        height: 35vh;
     }
 
     .loginsection {
-        width: 60%;
+        width: 80%;
         font-size: 1.1vw;
+        
     }
 
 
@@ -109,8 +108,10 @@ header {
     }
 
     .loginsection form {
-        width: 60%;
+        width: 50%;
         margin: 0% auto;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .loginsection form div {
@@ -128,6 +129,7 @@ header {
         height: 50px;
         font-size: 1vw;
         padding: 0%;
+        width: 50%;
     }
 
     .loginsection p {

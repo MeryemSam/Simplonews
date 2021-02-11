@@ -20,6 +20,10 @@ body {
     --white: white;
 }
 
+.redstar{
+color: var(--red);
+margin: 0 1%;
+}
 nav {
     background-color: var(--white);
     height: 5vh;
@@ -39,7 +43,6 @@ nav img {
 
 nav a {
     text-decoration: none;
-    font-size: 10vw;
     margin: 0% 3%;
     font-weight: 600;
     color: var(--red);
@@ -137,7 +140,29 @@ footer {
     margin: 0 5%;
   }
 
- 
+
+  .buttons {
+    height: 35px;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    padding: 0;
+    width: 95%;
+    margin: 0% auto;
+    text-align: center;
+    height: 4vh;
+    border-radius: 5px;
+}
+
+
+.buttons:hover{
+   opacity: 0.8;
+   cursor:pointer;
+}
+
+ a{
+    text-decoration: none;
+}
 
 
 @media screen and (min-width: 1200px) {
