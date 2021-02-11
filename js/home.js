@@ -41,8 +41,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                         </div>
                         </div>
                         `
-                        
                     }
+
+
                     
                     homesection.innerHTML = str;
                     
