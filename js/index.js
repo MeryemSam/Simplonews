@@ -9,7 +9,7 @@ let createAccountDiv = document.querySelector("#createAccount")
 let email;
 let password;
 
-close.addEventListener("click" , ()=>{
+close.addEventListener("click", () => {
     errormessgage.style.display = "none"
 })
 
@@ -48,10 +48,10 @@ loginDiv.addEventListener("click", (e) => {
                     .then(function(data) {
                         if (response.status == 400) {
                             console.log(data);
-                            if (email == null || email =="" || password == null || password == "") {
-                                errorme.innerHTML = "Remplissez tous les champs requis";  
-                            }else{
-                                errorme.innerHTML = data["error"] ;
+                            if (email == null || email == "" || password == null || password == "") {
+                                errorme.innerHTML = "Remplissez tous les champs requis";
+                            } else {
+                                errorme.innerHTML = data["error"];
                             }
                             errormessgage.style.display = "block";
 
@@ -60,10 +60,10 @@ loginDiv.addEventListener("click", (e) => {
                         } else if (response.status == 403) {
                             console.log(data);
 
-                            if (email == null || email =="" || password == null || password == "") {
-                                errorme.textContent = "Remplissez tous les champs requis";  
-                            }else{
-                                errorme.innerHTML = data["error"] ;
+                            if (email == null || email == "" || password == null || password == "") {
+                                errorme.textContent = "Remplissez tous les champs requis";
+                            } else {
+                                errorme.innerHTML = data["error"];
                             }
                             errormessgage.style.display = "block";
                             // gestion erreur authentification
@@ -72,14 +72,14 @@ loginDiv.addEventListener("click", (e) => {
                             // console.log();
                             let tokenResponse = data["token"]
                             sessionStorage.setItem("token", tokenResponse);
-                            
+
                             errormessgage.style.display = "block";
                             errormessgage.classList.add("greenmessage");
                             errormessgage.classList.remove("errormessgage");
-                            errorme.textContent = "Connecté !";  
+                            errorme.textContent = "Connecté !";
                             setInterval(() => {
                                 document.location.href = "./home.html";
-                                
+
                             }, 500);
                         }
                     })
@@ -94,8 +94,7 @@ loginDiv.addEventListener("click", (e) => {
     }
 })
 
+sessionStorage.clear("token")
 
 
-function test(params) {
-
-}
+console.log("token " + sessionStorage.getItem("token"));
