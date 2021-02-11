@@ -2,7 +2,7 @@
 //histoire du la nav
 let nav = document.querySelector("nav");
 nav.innerHTML= 
-`<a href="home.html"><img src="./assets/images/SIMPLONNEWS.svg" alt="logo" ></a>
+`<a href="home.html"><img src="./assets/images/SIMPLONNEWS.png" alt="logo" ></a>
 
 <div>
     <i class="barbuton fas fa-bars"></i>
