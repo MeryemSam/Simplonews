@@ -6,6 +6,26 @@
 * {
     font-family: 'Mulish', sans-serif;
 }
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0); 
+    border-radius: 5px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:var(--red); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
 
 body {
     margin: 0;
@@ -24,6 +44,64 @@ body {
 color: var(--red);
 margin: 0 1%;
 }
+
+.errormessgage{
+    display: none;
+    background-color: white;
+    margin: 3%;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid #ce00343f;
+}
+
+.greenmessage{
+    display: none;
+    background-color: white;
+    margin: 3%;
+    z-index: 5;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    border-radius: 5px;
+    border: 1px solid #00ff403f;
+}
+
+.greenmessage i{
+    color: #00ff40;
+    float: right;
+ }
+ 
+ .greenmessage p{
+     color: #00ff40;
+     text-align: center;
+     padding: 1% 0.1%;
+     border-left: 3px solid #00ff40;
+  }
+
+.errormessgage i{
+   margin: 1%;
+   color: var(--red);
+   float: right;
+}
+
+.errormessgage p{
+    color: var(--red);
+    text-align: center;
+    font-family: 'Mulish', sans-serif;
+    padding: 1% 0.1%;
+    border-left: 3px solid var(--red);
+ }
+
+
 nav {
     background-color: var(--white);
     height: 5vh;
@@ -123,6 +201,7 @@ footer {
   footer p{
       text-align: center;
       color: var(--red);
+      
   }
   footer div.footer-links {
     font-size: 18px;
@@ -167,6 +246,14 @@ footer {
 
 @media screen and (min-width: 1200px) {
 
+    .errormessgage{
+        width: 30%;
+    }
+
+    .greenmessage{
+        width: 30%;
+
+    }
     nav {
         background-color: var(--white);
         height: 5vh;

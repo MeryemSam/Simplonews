@@ -3,12 +3,21 @@ let lastname = document.querySelector("#lastname");
 let mailadress = document.querySelector("#email");
 let passwordfix = document.querySelector("#password");
 let singup = document.querySelector("#signupbutton");
+let errorme = document.querySelector(".errorme");
+let errormessgage = document.querySelector(".errormessgage");
+let close = document.querySelector(".errormessgage i")
+
 
 
 // let first = firstname.value ;
 // let last = lastname.value ;
 // let mail = mailadress.value ;
 // let pass = passwordfix.value ;
+
+close.addEventListener("click" , ()=>{
+    errormessgage.style.display = "none";
+   
+})
 
 singup.addEventListener("click" , () =>{
     if (firstname.value == undefined || lastname.value == undefined || mailadress.value == undefined || passwordfix.value == undefined) {
@@ -44,11 +53,18 @@ singup.addEventListener("click" , () =>{
                     .then(function (data) {
                         if (response.status == 400) {
                             console.log(data);
+                            if (firstname.value == null || firstname.value =="") {
+                                errorme.textContent = "Fill all the required";
+                                
+                            }
                             // gestion erreur données envoyer a la requette
+                            errormessgage.style.display = "block";
                         }
                         else if (response.status == 403) {
                             console.log(data);
                             // gestion erreur authentification
+                            errorme.innerHTML = data["error"] ;
+                            errormessgage.style.display = "block";
                         }
                         else {
                             console.log(data);
