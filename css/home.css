@@ -11,6 +11,9 @@ main{
     width: 100%;
     height: auto;
     border-radius: 10px;
+    background-color:#ce00346e;
+    text-align: center;
+    color: var(--white);
 }
 
 .homesection h2 {
