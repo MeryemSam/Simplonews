@@ -1,6 +1,7 @@
 let emailDiv = document.querySelector("#email")
 let passwordDiv = document.querySelector("#password")
 let loginDiv = document.querySelector("#loginbutton")
+let errorme = document.querySelector(".errorme");
 
 let createAccountDiv = document.querySelector("#createAccount")
 let email;
