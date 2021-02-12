@@ -78,9 +78,6 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
         
         
         }
-        
-        console.log("token " + sessionStorage.getItem("token"));
-        
         function redirectToLoginPage() {
             let tokenCheck = sessionStorage.getItem("token")
         
