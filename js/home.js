@@ -26,6 +26,7 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                     // ici on peut exploiter nos donnée
                     let homesection = document.querySelector(".homesection");
                     let arr = data["articles"];
+
                     let str = "";
                     for (let i = 0; i < arr.length; i++) {
                         str +=

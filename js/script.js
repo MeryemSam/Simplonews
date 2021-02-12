@@ -14,7 +14,7 @@ nav.innerHTML =
 
 <div class="navigationphone">
     <a href="home.html">Accueil</a>
-    <a class="disconnectButton"  href="index.html">Se déconnecter</a>
+    <a class="disconnectButton" href="index.html">Se déconnecter</a>
 </div>`;
 
 
@@ -25,10 +25,11 @@ barbuton.addEventListener("click", () => {
         if (navigation.className === "navigationhidden") {
             navigation.classList.add("navigation");
             navigation.classList.remove("navigationhidden");
+            setupDisconnectFunction()
         } else {
             navigation.classList.add("navigationhidden");
             navigation.classList.remove("navigation");
-
+            setupDisconnectFunction()
         }
 
     })
