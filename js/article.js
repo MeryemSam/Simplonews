@@ -1,14 +1,10 @@
 var passid = sessionStorage.getItem("passid");
-
-console.log(passid);
 var token = sessionStorage.getItem("token");
-
-
+// console.log(passid);
 let passIdDuplicate = passid
 
 
 
-// let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjoib3dvVXNlckB0ZXN0LmZyIiwicGFzc3dvcmQiOiIkMmIkMTAkak45SkhRbmhkUVZ1ekszZndwRGJRZWxMUjg3OU9zeHFSdkR1TXVULlZwdGdHNlZTOTkxWnUiLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJpYXQiOjE2MTI5NjM5ODB9.JYF5P8FTHl3UHszkjC613vztA9bCFqKglo6p3P_bW0o";
 let fetch_config = {
     method: "GET",
     headers: {
@@ -51,9 +47,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                             </p>
         
                         </section>
-                        <button class="longbutton previousArticle">Previous Article</a>
+                        <button class="switchArticleButtons previousArticle">Previous Article</button>
                         <a href="home.html" class="longbutton">Accueil</a>
-                        <button class="longbutton nextArticle">Next Article</a>
+                        <button class="switchArticleButtons nextArticle">Next Article</button>
                         
                         </article>
 

@@ -95,6 +95,3 @@ loginDiv.addEventListener("click", (e) => {
 })
 
 sessionStorage.clear("token")
-
-
-console.log("token " + sessionStorage.getItem("token"));
