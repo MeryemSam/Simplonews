@@ -48,8 +48,6 @@ loginDiv.addEventListener("click", (e) => {
                     .then(function(data) {
                         if (response.status == 400) {
                             console.log(data);
-
-
                             if (email == null || email =="" || password == null || password == "") {
                                 errorme.innerHTML = "Remplissez tous les champs requis";  
                             }else{
@@ -74,6 +72,7 @@ loginDiv.addEventListener("click", (e) => {
                             // console.log();
                             let tokenResponse = data["token"]
                             sessionStorage.setItem("token", tokenResponse);
+                            
                             errormessgage.style.display = "block";
                             errormessgage.classList.add("greenmessage");
                             errormessgage.classList.remove("errormessgage");

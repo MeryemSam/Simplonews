@@ -8,26 +8,13 @@ let errormessgage = document.querySelector(".errormessgage");
 let close = document.querySelector(".errormessgage i")
 
 
-
-// let first = firstname.value ;
-// let last = lastname.value ;
-// let mail = mailadress.value ;
-// let pass = passwordfix.value ;
-
 close.addEventListener("click" , ()=>{
     errormessgage.style.display = "none";
    
 })
 
 singup.addEventListener("click" , () =>{
-    if (firstname.value == undefined || lastname.value == undefined || mailadress.value == undefined || passwordfix.value == undefined) {
-        singup.disabled = true;
-        singup.style.cursor = "not-allowed";
-        } else{
-            singup.disabled = false;
-            singup.style.cursor = "pointer";
-
-
+  
             let fetchConfig = {
                 method: "POST",
                 headers: {
@@ -53,9 +40,8 @@ singup.addEventListener("click" , () =>{
                     .then(function (data) {
                         if (response.status == 400) {
                             console.log(data);
-                            if (firstname.value == null || firstname.value =="") {
-                                errorme.textContent = "Fill all the required";
-                                
+                            if (firstname.value == null || firstname.value =="" || lastname.value == null || lastname.value == "" || mailadress.value == null || mailadress.value == "" || passwordfix.value == null || passwordfix.value == "") {
+                                errorme.textContent = "Remplissez tous les champs requis";
                             }
                             // gestion erreur données envoyer a la requette
                             errormessgage.style.display = "block";
@@ -70,10 +56,13 @@ singup.addEventListener("click" , () =>{
                             console.log(data);
                             // ici on peut exploiter nos donnée
                             console.log("sccusse");
-                            alert("done");
+                            errormessgage.style.display = "block";
+                            errormessgage.classList.add("greenmessage");
+                            errormessgage.classList.remove("errormessgage");
+                            errorme.textContent = "Succès! Revenir à la page de connexion en 3 secondes"; 
                             setInterval(() => {
                                 document.location.href = "./index.html";
-                            }, 5000);
+                            }, 3000);
                         }
                     })
                     .catch(function (data_parsing_error) {
@@ -84,11 +73,6 @@ singup.addEventListener("click" , () =>{
                 // Cas erreur server (API)
                 console.log(server_errors);
             })
-        
-        
-
-        }
-
 })
 
    
