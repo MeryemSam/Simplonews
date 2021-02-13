@@ -1,14 +1,15 @@
 var passid = sessionStorage.getItem("passid");
-
-console.log(passid);
 var token = sessionStorage.getItem("token");
-
-
 let passIdDuplicate = passid
 
+console.log('Current article number: ' + passIdDuplicate);
+// console.log('Current article ID: ' + data["articles"][passIdDuplicate]["id"]);
 
 
-// let token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OTUsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjoib3dvVXNlckB0ZXN0LmZyIiwicGFzc3dvcmQiOiIkMmIkMTAkak45SkhRbmhkUVZ1ekszZndwRGJRZWxMUjg3OU9zeHFSdkR1TXVULlZwdGdHNlZTOTkxWnUiLCJjcmVhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIxLTAyLTEwVDEzOjMwOjQ4LjAwMFoiLCJpYXQiOjE2MTI5NjM5ODB9.JYF5P8FTHl3UHszkjC613vztA9bCFqKglo6p3P_bW0o";
+
+
+
+//GET ARTICLES LIST
 let fetch_config = {
     method: "GET",
     headers: {
@@ -32,7 +33,8 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                     // gestion erreur authentification
                 } else {
                     console.log(data);
-                    let articlesArray = data["articles"];
+                    var data_articlesArray = data["articles"];
+
 
                     function generateArticle() {
                         // ici on peut exploiter nos donnée
@@ -51,46 +53,47 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                             </p>
         
                         </section>
-                        <button class="longbutton previousArticle">Previous Article</a>
+                        <button class="previousArticle">Previous Article</button>
                         <a href="home.html" class="longbutton">Accueil</a>
-                        <button class="longbutton nextArticle">Next Article</a>
+                        <button class="nextArticle">Next Article</a>
                         
                         </article>
 
                    
                         `
-                            // NEXT AND PREVIOUS ARTICLE 
+
                         let previousArticleButton = document.querySelector(".previousArticle")
                         let nextArticleButton = document.querySelector(".nextArticle")
+                        previousArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
+                        nextArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
 
-                        function changeCurrentArticleToNext() {
-                            if (passIdDuplicate < articlesArray.length)
-                                passIdDuplicate++;
-                            else {
-                                passIdDuplicate = 0
+                        function changeCurrentArticleOnButtonClick(eventListenerCallback) {
+                            let clickedElement = eventListenerCallback.target;
+
+                            if (clickedElement.className == "nextArticle") { // next button
+                                if (passIdDuplicate == data_articlesArray.length) // if at last article, set current article to array[0]
+                                    passIdDuplicate = 0
+                                else {
+                                    passIdDuplicate++;
+                                }
+                            } else if (clickedElement.className == "previousArticle") { // previous button 
+                                // if at first article, set current article to last index array
+
+                                if (passIdDuplicate == 0)
+                                // passIdDuplicate = data_articlesArray.length - 1
+                                    passIdDuplicate = data_articlesArray.length
+                                else {
+                                    passIdDuplicate--;
+                                }
                             }
 
-                            console.log(passIdDuplicate);
+                            console.log('Article position in array: ' + passIdDuplicate + ` / (${passIdDuplicate+1})` + ' | ID: ' + data["articles"][passIdDuplicate]["id"]);
                             generateArticle()
                         }
-
-                        function changeCurrentArticleToPrevious() {
-                            if (passIdDuplicate > articlesArray.length)
-                                passIdDuplicate--;
-                            else {
-                                passIdDuplicate = articlesArray.length
-                            }
-
-                            console.log(passIdDuplicate);
-                            generateArticle()
-                        }
-                        previousArticleButton.addEventListener("click", changeCurrentArticleToPrevious)
-                        nextArticleButton.addEventListener("click", changeCurrentArticleToNext)
-
                     }
+                    // NEXT AND PREVIOUS ARTICLE 
+
                     generateArticle()
-
-
 
                 }
             })

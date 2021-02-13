@@ -49,7 +49,7 @@ loginDiv.addEventListener("click", (e) => {
                         if (response.status == 400) {
                             console.log(data);
                             if (email == null || email == "" || password == null || password == "") {
-                                errorme.innerHTML = "Remplissez tous les champs requis";
+                                errorme.innerHTML = "Veuillez remplir les champs requis.";
                             } else {
                                 errorme.innerHTML = data["error"];
                             }
@@ -61,7 +61,7 @@ loginDiv.addEventListener("click", (e) => {
                             console.log(data);
 
                             if (email == null || email == "" || password == null || password == "") {
-                                errorme.textContent = "Remplissez tous les champs requis";
+                                errorme.textContent = "Veuillez remplir les champs requis.";
                             } else {
                                 errorme.innerHTML = data["error"];
                             }

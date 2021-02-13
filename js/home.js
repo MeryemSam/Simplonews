@@ -34,7 +34,7 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                         <div class="post" id="${data["articles"].indexOf(arr[i])}">
                         <img src="${data["articles"][i]["img"]}" alt="${data["articles"][i]["title"]} image">
                         <div class="titreandresum">
-                        <h2>${data["articles"][i]["title"]}</h2>
+                        <h2><a href="#" class="homeArticleTitle_h2">${data["articles"][i]["title"]}</a></h2>
                         <h4>${data["articles"][i]["author"]}</h4>
                         <p>${data["articles"][i]["resume"]}</p>
                         </div>
@@ -42,6 +42,9 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                         `
 
                     }
+                    // <a href="#" class="homeArticleTitle_h2"></a>
+
+
 
                     homesection.innerHTML = str;
 
