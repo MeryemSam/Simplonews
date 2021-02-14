@@ -49,46 +49,48 @@ fetch("https://simplonews.brianboudrioux.fr/articles", fetch_config)
                             </p>
         
                         </section>
-                        
-                        <a href="home.html" class="longbutton">Accueil</a>
+                            <div class="previousAndNextButtonsContainer">
+                                <button class="previousArticle">Previous Article</button>
+                                <button class="nextArticle">Next Article</button>
+                            </div>
+                            <a href="home.html" class="longbutton">Accueil</a>
                         
                         </article>
                         
                         
                         `
-                            // <button class="previousArticle">Previous Article</button>
-                            // <a href="home.html" class="longbutton">Accueil</a>
-                            // <button class="nextArticle">Next Article</a>
 
 
-                        // let previousArticleButton = document.querySelector(".previousArticle")
-                        // let nextArticleButton = document.querySelector(".nextArticle")
-                        // previousArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
-                        // nextArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
+                        let previousArticleButton = document.querySelector(".previousArticle")
+                        let nextArticleButton = document.querySelector(".nextArticle")
+                        previousArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
+                        nextArticleButton.addEventListener("click", changeCurrentArticleOnButtonClick)
 
-                        // function changeCurrentArticleOnButtonClick(eventListenerCallback) {
-                        //     let clickedElement = eventListenerCallback.target;
+                        function changeCurrentArticleOnButtonClick(eventListenerCallback) {
+                            let clickedElement = eventListenerCallback.target;
 
-                        //     if (clickedElement.className == "nextArticle") { // next button
-                        //         if (passIdDuplicate == data_articlesArray.length) // if at last article, set current article to array[0]
-                        //             passIdDuplicate = 0
-                        //         else {
-                        //             passIdDuplicate++;
-                        //         }
-                        //     } else if (clickedElement.className == "previousArticle") { // previous button 
-                        //         // if at first article, set current article to last index array
+                            if (clickedElement.className == "nextArticle") { // next button
+                                if (passIdDuplicate == data_articlesArray.length) // if at last article, set current article to array[0]
+                                    passIdDuplicate = 0
+                                else {
+                                    passIdDuplicate++;
+                                }
+                            } else if (clickedElement.className == "previousArticle") { // previous button 
+                                // if at first article, set current article to last index array
 
-                        //         if (passIdDuplicate == 0)
-                        //         // passIdDuplicate = data_articlesArray.length - 1
-                        //             passIdDuplicate = data_articlesArray.length
-                        //         else {
-                        //             passIdDuplicate--;
-                        //         }
-                        //     }
+                                if (passIdDuplicate == 0)
+                                    passIdDuplicate = data_articlesArray.length - 1
+                                    // passIdDuplicate = data_articlesArray.length
+                                else {
+                                    passIdDuplicate--;
+                                }
+                            }
 
-                        //     console.log('Article position in array: ' + passIdDuplicate + ` / (${passIdDuplicate+1})` + ' | ID: ' + data["articles"][passIdDuplicate]["id"]);
-                        //     generateArticle()
-                        // }
+                            console.log('Article position in array: ' + passIdDuplicate + ` / (${passIdDuplicate+1})` + ' | ID: ' + data["articles"][passIdDuplicate]["id"]);
+                            generateArticle()
+                            window.scrollTo(0, 0);
+
+                        }
                     }
                     // NEXT AND PREVIOUS ARTICLE 
 

@@ -1,9 +1,9 @@
-
-.articlesection{
+.articlesection {
     padding: 20% 8%;
     margin: 0 auto;
     display: flex;
 }
+
 .authorName {
     text-align: right;
     color: #CE0033;
@@ -13,11 +13,9 @@
     padding: 1%;
 }
 
-
 .articlesection figure {
     padding: 0%;
     margin: 0;
-
 }
 
 .articlesection img {
@@ -27,7 +25,7 @@
     border: 1px solid black;
 }
 
-.reume{
+.reume {
     font-style: italic;
     padding: 3% 0;
     border-bottom: 1px solid #ce003428;
@@ -43,7 +41,7 @@
     text-align: left;
 }
 
-.longbutton{
+.longbutton {
     margin: 0 auto;
     display: block;
     text-align: center;
@@ -57,32 +55,50 @@
 
 
 /* DESKTOP VERSION*/
-@media only screen and (min-width: 768px) {
 
-    .articlesection{
+@media only screen and (min-width: 768px) {
+    .articlesection {
         padding-top: 6%;
         width: 60%;
         margin: 0 auto;
     }
-  
     .articlesection .authorName {
         color: #CE0033;
         padding: 0;
-
     }
     .articlesection .articleTitle {
         text-align: left;
     }
-
-
     .articlesection img {
         height: auto;
         width: 60%;
         margin: 0% auto;
     }
-
-    
 }
 
 
 /* DESKTOP VERSION END*/
+
+.articlesection img {
+    cursor: pointer;
+}
+
+.previousAndNextButtonsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: .4%;
+}
+
+.previousArticle,
+.nextArticle {
+    margin: 0 .2%;
+    text-align: center;
+    width: 41.7%;
+    height: auto;
+    border: none;
+    background: var(--red);
+    color: var(--white);
+    padding: 2%;
+    cursor: pointer;
+}
