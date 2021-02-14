@@ -24,4 +24,4 @@ function redirectToLoginPage() {
     }
 }
 
-// redirectToLoginPage()
+redirectToLoginPage()
